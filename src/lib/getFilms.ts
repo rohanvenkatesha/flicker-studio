@@ -1,5 +1,6 @@
 import films from "@/data/films.json";
-import { Film } from "@/types";
+import { Film, Filmmaker } from "@/types";
+import creators from "@/data/filmmakers.json";
 
 export function getAllFilms(): Film[] {
   return films as Film[];
@@ -29,4 +30,11 @@ export function getNewReleases(limit?: number): Film[] {
 
 export function getFilmById(id: string): Film | undefined {
   return (films as Film[]).find(f => f.id === id);
+}
+
+export function getFilmmaker(id: string) {
+  return {
+    creator: (creators as Filmmaker[]).find(c => c.id === id),
+    films: (films as Film[]).filter(f => f.directorId === id)
+  };
 }

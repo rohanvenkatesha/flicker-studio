@@ -96,7 +96,7 @@
 
 import Link from 'next/link';
 import { X, Share2, Heart, Volume2, Maximize, Globe, Star } from 'lucide-react';
-import { getFilmById } from '@/lib/getFilmById';
+import { getFilmById } from '@/lib/getFilms';
 import Footer from '@/components/layout/Footer';
 import NavBar from '@/components/layout/NavBar'; // Assuming your path
 import { notFound } from 'next/navigation';

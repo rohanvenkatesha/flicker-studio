@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { getFilmmaker } from '@/lib/getFilmmaker';
+import { getFilmmaker } from '@/lib/getFilms';
 import FilmEditorialCard from '@/components/film/FilmEditorialCard';
 import Footer from '@/components/layout/Footer';
 import { notFound } from 'next/navigation';
