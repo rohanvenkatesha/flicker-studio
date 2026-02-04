@@ -1,0 +1,48 @@
+/ (project root)
+│
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx                     # Landing Page
+│   ├── browse/
+│   │   └── page.tsx                 # Browse + filters
+│   ├── watch/
+│   │   └── [id]/
+│   │       └── page.tsx             # Watch page
+│   ├── filmmaker/
+│   │   └── [id]/
+│   │       └── page.tsx             # Filmmaker profile
+│   └── globals.css
+│
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   │
+│   ├── film/
+│   │   ├── FilmCard.tsx
+│   │   ├── FilmRow.tsx
+│   │   ├── FilmPlayer.tsx
+│   │   └── FilmMeta.tsx
+│   │
+│   └── home/
+│       ├── Hero.tsx
+│       └── MoodSection.tsx
+│
+├── data/
+│   ├── films.json
+│   ├── filmmakers.json
+│   ├── genres.json
+│   └── moods.json
+│
+├── lib/
+│   ├── getFilms.ts
+│   ├── getFilmById.ts
+│   └── getFilmmaker.ts
+│
+├── types/
+│   ├── film.ts
+│   ├── filmmaker.ts
+│   └── index.ts
+│
+└── public/
+    └── posters/
