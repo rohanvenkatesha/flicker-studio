@@ -1,13 +1,11 @@
-import Link from 'next/link';
-import { ChevronRight, Volume2 } from 'lucide-react';
+import { Volume2 } from 'lucide-react';
 import NavBar from '@/components/layout/NavBar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/home/Hero';
-import FilmEditorialCard from '@/components/film/FilmEditorialCard';
-import { getAllFilms, getFeaturedFilms } from '@/lib/getFilms';
+import FilmSections from '@/components/home/FilmSections';
+import { getFeaturedFilms } from '@/lib/getFilms';
 
 export default function Home() {
-  const films = getAllFilms();
   const featuredFilms = getFeaturedFilms();
 
   return (
@@ -19,40 +17,7 @@ export default function Home() {
       <main className="animate-in fade-in duration-700">
         <Hero featuredFilms={featuredFilms} />
 
-        <section className="py-40 px-6 md:px-12 max-w-[1800px] mx-auto space-y-24">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 border-b border-white/5 pb-16">
-            <div className="space-y-4">
-              <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-white/30">
-                Curated Series
-              </span>
-              <h2 className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter leading-none">
-                THE <br />
-                ARCHIVE
-              </h2>
-            </div>
-            <div className="max-w-sm text-right space-y-6">
-              <p className="text-white/40 italic text-sm leading-relaxed">
-                Our selection is updated every midnight. Discover hand-picked visions from the global
-                underground.
-              </p>
-              <Link
-                href="/browse"
-                className="group flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] ml-auto w-fit"
-              >
-                View Complete Index
-                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
-                  <ChevronRight size={14} />
-                </div>
-              </Link>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[400px]">
-            {films.map((film, idx) => (
-              <FilmEditorialCard key={film.id} film={film} large={idx === 0} />
-            ))}
-          </div>
-        </section>
+        <FilmSections />
 
         <section className="py-40 bg-zinc-900/30">
           <div className="max-w-[1800px] mx-auto px-6 md:px-12">

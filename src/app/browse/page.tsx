@@ -76,7 +76,8 @@ export default function BrowsePage() {
                 Vault Exploration
               </span>
               <h2 className="text-7xl md:text-[10vw] font-black italic uppercase tracking-tighter leading-none">
-                THE <span className="text-transparent stroke-white stroke-1 opacity-20">LAB</span>
+                THE VAULT
+                {/* <span className="text-transparent stroke-white stroke-1 opacity-20"></span> */}
               </h2>
             </div>
             <div className="w-full md:max-w-md border-b border-white/20 flex items-center py-4">
@@ -173,11 +174,11 @@ export default function BrowsePage() {
           </div>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 px-1 pb-32">
-          {filteredAndSortedFilms.map((film) => (
-            <FilmEditorialCard key={film.id} film={film} />
-          ))}
-        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 md:gap-16 px-6 md:px-12 pb-32">
+  {filteredAndSortedFilms.map((film) => (
+    <FilmEditorialCard key={film.id} film={film} />
+  ))}
+</div>
 
         <Footer />
       </main>

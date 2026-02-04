@@ -59,7 +59,7 @@ export default function Hero({ featuredFilms }: HeroProps) {
           >
             <img
               src={film.banner ?? film.poster}
-              className="w-full h-full object-cover grayscale scale-110 animate-slow-zoom"
+              className="w-full h-full object-cover scale-110 animate-slow-zoom"
               alt=""
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-[#050505]" />
@@ -77,12 +77,14 @@ export default function Hero({ featuredFilms }: HeroProps) {
                 isTransitioning ? 'scale-95 opacity-0 -translate-x-10' : 'scale-100 opacity-100 translate-x-0'
               }`}
             >
-              <div className="absolute inset-0 bg-white/5 border border-white/10 -rotate-2 group-hover:rotate-0 transition-transform duration-700" />
-              <img
-                src={currentFilm.poster}
-                className="w-full h-full object-cover grayscale relative z-10 shadow-2xl"
-                alt=""
-              />
+<div className="absolute inset-0 bg-white/5 border border-white/10 rounded-2xl -rotate-2 group-hover:rotate-0 transition-transform duration-700" />
+  
+  {/* The Poster Image */}
+  <img
+    src={currentFilm.poster}
+    className="rounded-2xl w-full h-full object-cover relative z-10 shadow-2xl"
+    alt={currentFilm.title}
+  />
             </div>
             <div className="absolute -right-12 top-1/2 -translate-y-1/2 z-20 pointer-events-none">
               <span className="text-[14rem] font-black italic uppercase leading-none text-transparent stroke-white stroke-1 opacity-10 block origin-center -rotate-90">
@@ -148,9 +150,9 @@ export default function Hero({ featuredFilms }: HeroProps) {
                 </div>
                 <span>Begin Experience</span>
               </button>
-              <button className="text-[11px] font-black uppercase tracking-[0.3em] text-white/30 hover:text-white transition-all underline underline-offset-8 decoration-white/20">
+              {/* <button className="text-[11px] font-black uppercase tracking-[0.3em] text-white/30 hover:text-white transition-all underline underline-offset-8 decoration-white/20">
                 Read Dossier
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

@@ -30,14 +30,14 @@ export default function NavBar() {
             </span>
           </Link>
 
-          <div className="hidden lg:flex gap-8 text-[9px] font-bold uppercase tracking-[0.3em] text-white/40">
+          {/* <div className="hidden lg:flex gap-8 text-[9px] font-bold uppercase tracking-[0.3em] text-white/40">
             {['Archive', 'Laboratory', 'Makers'].map((item) => (
               <button key={item} className="hover:text-white transition-colors relative group">
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-500" />
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div className="flex items-center gap-8">
@@ -49,10 +49,10 @@ export default function NavBar() {
             <span className="hidden sm:inline">Search Library</span>
           </Link>
           <div className="h-4 w-[1px] bg-white/10 hidden sm:block" />
-          <button className="relative group overflow-hidden bg-white text-black px-8 py-3 text-[9px] font-black uppercase tracking-[0.2em]">
+          {/* <button className="relative group overflow-hidden bg-white text-black px-8 py-3 text-[9px] font-black uppercase tracking-[0.2em]">
             <span className="relative z-10">Access Pass</span>
             <div className="absolute inset-0 bg-zinc-200 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-          </button>
+          </button> */}
         </div>
       </div>
     </nav>

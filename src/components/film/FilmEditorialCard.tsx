@@ -15,18 +15,18 @@ export default function FilmEditorialCard({ film, large = false }: FilmEditorial
   return (
     <Link
       href={`/watch/${film.id}`}
-      className={`group cursor-pointer relative overflow-hidden bg-zinc-900 border border-white/5 block ${
+      className={`group cursor-pointer relative overflow-hidden rounded-2xl bg-zinc-900 border border-white/10 block transition-all duration-300 hover:border-white/20 ${
         large ? 'md:col-span-2 md:row-span-2' : ''
       }`}
     >
       <div
-        className={`relative aspect-square md:aspect-auto ${
+        className={`relative overflow-hidden aspect-square md:aspect-auto ${
           large ? 'h-full' : 'h-[400px] md:h-[500px]'
         }`}
       >
         <img
           src={posterOrBanner}
-          className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
+          className="w-full h-full object-cover  group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
           alt={film.title}
         />
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 md:p-12">
@@ -36,7 +36,7 @@ export default function FilmEditorialCard({ film, large = false }: FilmEditorial
               <span className="w-1 h-1 rounded-full bg-white/40" />
               <span>{typeof film.duration === 'number' ? film.duration : film.duration} MIN</span>
             </div>
-            <h3 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter leading-none">
+            <h3 className="text-4xl md:text-2xl font-black italic uppercase tracking-tighter leading-none">
               {film.title}
             </h3>
             <p className="text-white/60 text-sm italic line-clamp-2 max-w-sm">{film.description}</p>
